@@ -1,21 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const Rstar = document.getElementById("Rstar");
-    const RstarValue = document.getElementById("Rstar-value");
-    
-    Rstar.addEventListener("input", function() {
-        RstarValue.textContent = Rstar.value;
-        calculateDrakeEquation();
+    const components = ["Rstar", "fp", "ne", "fl", "fi", "fc", "L"];
+
+    components.forEach(component => {
+        const slider = document.getElementById(component);
+        const valueSpan = document.getElementById(`${component}-value`);
+
+        slider.addEventListener("input", function() {
+            valueSpan.textContent = slider.value;
+            calculateDrakeEquation();
+        });
     });
-    
-    // Repeat the above for each variable in the Drake Equation
 });
 
 function calculateDrakeEquation() {
-    // Get values from all sliders
     const RstarValue = parseFloat(document.getElementById("Rstar").value);
-    // ... Fetch values for all other variables ...
+    const fpValue = parseFloat(document.getElementById("fp").value);
+    const neValue = parseFloat(document.getElementById("ne").value);
+    const flValue = parseFloat(document.getElementById("fl").value);
+    const fiValue = parseFloat(document.getElementById("fi").value);
+    const fcValue = parseFloat(document.getElementById("fc").value);
+    const LValue = parseFloat(document.getElementById("L").value);
 
-    const N = RstarValue;  // The multiplication with other values is commented out for now.
+    const N = RstarValue * fpValue * neValue * flValue * fiValue * fcValue * LValue;
 
     document.getElementById("result").textContent = "Estimated civilizations: " + N;
 }
