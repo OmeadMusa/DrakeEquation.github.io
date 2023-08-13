@@ -11,10 +11,32 @@
         <h1>Interactive Drake Equation</h1>
 
         <label for="Rstar">Rate of star formation (R*):</label>
-        <input type="range" id="Rstar" min="0" max="10" step="0.1" value="1.5">
+        <input type="range" id="Rstar" min="0" max="30" step="0.1" value="1.5">
         <span id="Rstar-value">1.5</span>
-        
-        <!-- Repeat the above three lines for each of the variables in the Drake Equation -->
+
+        <label for="fp">Fraction of those stars with planetary systems (fp):</label>
+        <input type="range" id="fp" min="0" max="1" step="0.01" value="0.5">
+        <span id="fp-value">0.5</span>
+
+        <label for="ne">Number of planets that could support life (ne):</label>
+        <input type="range" id="ne" min="0" max="5" step="0.1" value="2">
+        <span id="ne-value">2</span>
+
+        <label for="fl">Fraction of those planets where life develops (fl):</label>
+        <input type="range" id="fl" min="0" max="1" step="0.01" value="0.5">
+        <span id="fl-value">0.5</span>
+
+        <label for="fi">Fraction of life-bearing planets where intelligent life emerges (fi):</label>
+        <input type="range" id="fi" min="0" max="1" step="0.01" value="0.5">
+        <span id="fi-value">0.5</span>
+
+        <label for="fc">Fraction of civilizations that release detectable signals (fc):</label>
+        <input type="range" id="fc" min="0" max="1" step="0.01" value="0.2">
+        <span id="fc-value">0.2</span>
+
+        <label for="L">Length of time civilizations can communicate (L in years):</label>
+        <input type="range" id="L" min="0" max="10000000" step="100" value="1000">
+        <span id="L-value">1000</span>
 
         <h2>Result:</h2>
         <p id="result">...</p>
