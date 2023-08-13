@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const slider = document.getElementById(component);
         const valueSpan = document.getElementById(`${component}-value`);
 
+        // Immediate function to show the initial value on page load
+        valueSpan.textContent = slider.value;
+
         slider.addEventListener("input", function() {
             valueSpan.textContent = slider.value;
             calculateDrakeEquation();
@@ -23,5 +26,5 @@ function calculateDrakeEquation() {
 
     const N = RstarValue * fpValue * neValue * flValue * fiValue * fcValue * LValue;
 
-    document.getElementById("result").textContent = "Estimated civilizations: " + N;
+    document.getElementById("result").textContent = "Estimated civilizations: " + N.toFixed(2); // .toFixed(2) will ensure you display only two decimal places
 }
