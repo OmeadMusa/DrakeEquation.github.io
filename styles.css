@@ -1,9 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
+.container label, 
+.container input[type="range"], 
+.container span {
+    display: block;       /* makes the element take up the full width, thus moving to a new line */
+    margin-bottom: 16px;  /* adds space below each element */
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+.container h1, .container h2 {
+    margin-bottom: 24px;  /* adds a bit more space below headings */
 }
