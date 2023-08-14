@@ -27,4 +27,18 @@ function calculateDrakeEquation() {
     const N = RstarValue * fpValue * neValue * flValue * fiValue * fcValue * LValue;
 
     document.getElementById("result").textContent = "Estimated civilizations: " + N.toFixed(2); // .toFixed(2) will ensure you display only two decimal places
+
+    const lightsContainer = document.getElementById("lightsContainer");
+    lightsContainer.innerHTML = ""; // clear previous lights
+
+    for(let i = 0; i < N; i++) {
+        const light = document.createElement("div");
+        light.classList.add("light");
+        
+        // Randomly position the light within the container
+        light.style.top = `${Math.random() * 100}%`;
+        light.style.left = `${Math.random() * 100}%`;
+
+        lightsContainer.appendChild(light);
+    }
 }
