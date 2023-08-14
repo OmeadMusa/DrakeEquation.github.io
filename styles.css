@@ -11,10 +11,46 @@ body {
 .container label, 
 .container input[type="range"], 
 .container span {
-    display: block;       /* makes the element take up the full width, thus moving to a new line */
-    margin-bottom: 16px;  /* adds space below each element */
+    display: block;
+    margin-bottom: 16px;
 }
 
 .container h1, .container h2 {
-    margin-bottom: 24px;  /* adds a bit more space below headings */
+    margin-bottom: 24px;
+}
+
+.galaxy {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 24px;
+}
+
+#milkyWayImage {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.light {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
