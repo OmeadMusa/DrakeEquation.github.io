@@ -26,6 +26,11 @@ function calculateDrakeEquation() {
 
     const N = RstarValue * fpValue * neValue * flValue * fiValue * fcValue * LValue;
 
+        // Cap N to a maximum of 5000
+    if (N > 5000) {
+        N = 5000;
+    }
+
     document.getElementById("result").textContent = "Estimated civilizations: " + N.toFixed(2); // .toFixed(2) will ensure you display only two decimal places
 
     const lightsContainer = document.getElementById("lightsContainer");
