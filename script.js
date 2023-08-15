@@ -42,28 +42,4 @@ function calculateDrakeEquation() {
         lightsContainer.appendChild(light);
 }
 
-function setScenario(type) {
-    let values;
-    switch(type) {
-        case 'original':
-            values = { Rstar: 5, fp: 0.2, ne: 1, fl: 1, fi: 1, fc: 0.1, L: 1000 };
-            break;
-        case 'optimistic':
-            values = { Rstar: 5, fp: 0.5, ne: 1, fl: 1, fi: 1, fc: 0.2, L: 10000 };
-            break;
-        case 'conservative':
-            values = { Rstar: 1, fp: 0.35, ne: 0.05, fl: 0.15, fi: 0.5, fc: 0.1, L: 1000 };
-            break;
-    }
-
-    // Set values to the sliders
-    for (let key in values) {
-        document.getElementById(key).value = values[key];
-        document.getElementById(`${key}-value`).textContent = values[key];
-    }
-
-    // Call the calculation function to update the result
-    calculateDrakeEquation();
-}
-
 }
