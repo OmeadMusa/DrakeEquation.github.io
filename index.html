@@ -8,7 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>Interactive Drake Equation</h1>
+        h1>Interactive Drake Equation</h1>
+<p class="drake-equation-text">N = R* × fp × ne × fl × fi × fc × L</p>  <!-- Historical Context -->
+
+<!-- Scenario buttons -->
+<div class="scenarios">
+    <button onclick="setScenario('original')">Original Estimate</button>
+    <button onclick="setScenario('optimistic')">Optimistic Estimate</button>
+    <button onclick="setScenario('conservative')">Conservative Estimate</button>
+</div>
 
         <label for="Rstar">Rate of star formation (R*):</label>
         <input type="range" id="Rstar" min="0" max="10" step="1" value="1">
