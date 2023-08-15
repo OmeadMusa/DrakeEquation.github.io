@@ -40,8 +40,7 @@ function calculateDrakeEquation() {
         light.style.left = `${Math.random() * 100}%`;
 
         lightsContainer.appendChild(light);
-    }
-// ... existing JavaScript functions ...
+}
 
 function setScenario(type) {
     let values;
